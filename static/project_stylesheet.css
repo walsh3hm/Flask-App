@@ -1,0 +1,40 @@
+<style type="text/css>
+
+
+div.container { 
+	width: 100%;
+	border: none;
+}
+
+body {
+	background: url("../static/city.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+legend {
+	font-size: 25px;
+}
+
+table {
+	border-color: white;
+	border-width: 1px;
+	text-align: left;
+	font-size: 13;
+}
+
+.columnone {
+	width: 75px;
+}
+
+.pfirst {
+	font-size: 15px;
+}
+
+.inputfield {
+	width: 200px;
+	margin: center;
+}
+
+	
+</style>

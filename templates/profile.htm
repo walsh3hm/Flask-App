@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="static/project_stylesheet.css"/>
+</head>
+<body>
+ <fieldset>
+ <legend> Profile Information: </legend>
+ <p class="pfirst">Please <b>update</b> your profile information on the following form
+ <br><em>All fields are required and must contain valid information</em></p>
+ <form action = "" method = "post">
+ <table border=1 background="static/city.jpg">
+	<tr>
+		<td class="columnone"><b>Member ID:</b></td>
+		<td>
+				<input type="text" name="memberID" class="inputfield" value="{{memberID}}" readonly>
+		</td>
+	</tr>
+	<tr>
+		<td class="columnone"><b>First Name:</b></td>
+		<td>
+				<input type = "text" name = "firstname" class="inputfield" value = "{{firstname}}">
+		</td>
+	</tr>
+	<tr>
+		<td class="columnone"><b>Last Name:</b></td>
+		<td>
+				<input type = "text" name = "lastname" class="inputfield" value = "{{lastname}}">
+		</td>
+	</tr>
+	<tr>
+		<td class="columnone"><b>Age:</b></td>
+		<td>
+				<input type = "number" name = "age" class="inputfield" value = "{{age}}">
+		</td>
+	</tr>
+	<tr>
+		<td class="columnone"><b>Email:</b></td>
+		<td>
+				<input type = "text" name = "email" class="inputfield" value = "{{email}}"> <em>&nbsp;&nbsp;&nbsp; e.g. user@domain.com&nbsp;&nbsp;</em>
+		</td>
+	</tr>
+	<tr>
+		<td class="columnone"><img src="{{ url_for('static', filename ='headshot.jpg')}}" width="130" height="110">
+		</td>
+		<td>
+				<textarea name="bio" rows=7 cols=55>{{bio}}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td  colspan=2>
+				<input type = "submit" value = "Click to Update">
+				{% if success %}
+					<h3 style="color:magenta;">&nbsp;&nbsp;&nbsp; Data successfully submitted to the database!</h3>
+				{% endif %}
+		</td>
+	</tr>
+</table>
+</form>
+<a href="/view_all_celebs"> Click to view all of the celebrities</a>
+<br>
+<a href="/view_one_celeb"> Click to view one of the celebrities</a>
+</fieldset>
+</body>
+</html>
